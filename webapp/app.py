@@ -12,12 +12,12 @@ import numpy as np
 st.set_option('deprecation.showfileUploaderEncoding', False)
 @st.cache_resource
 def decorder_model():
-    model = load_model("")
+    model = load_model('model.h5', compile = False)
     return model
 
 @st.cache_resource
 def load_tokenizer():
-    with open('/tokenizer.pickle', 'rb') as handle:
+    with open('tokenizer.pickle', 'rb') as handle:
       tokenizer = pickle.load(handle)
     return tokenizer
 
