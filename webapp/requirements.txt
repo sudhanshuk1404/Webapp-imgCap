@@ -1,4 +1,4 @@
-numpy == 1.21.6
+numpy == 2.0.0
 Pillow #pil
 streamlit
 tensorflow
