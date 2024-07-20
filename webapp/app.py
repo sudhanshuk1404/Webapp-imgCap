@@ -12,7 +12,7 @@ import numpy as np
 st.set_option('deprecation.showfileUploaderEncoding', False)
 @st.cache_resource
 def decorder_model():
-    model = load_model('/model.h5')
+    model = load_model("")
     return model
 
 @st.cache_resource
