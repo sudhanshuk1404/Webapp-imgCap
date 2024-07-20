@@ -17,7 +17,7 @@ def decorder_model():
 
 @st.cache_resource
 def load_tokenizer():
-    with open('tokenizer.pickle', 'rb') as handle:
+    with open('webapp/tokenizer.pickle', 'rb') as handle:
       tokenizer = pickle.load(handle)
     return tokenizer
 
