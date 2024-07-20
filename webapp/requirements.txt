@@ -1,5 +1,5 @@
 numpy <2.0.0
 Pillow #pil
 streamlit
-tensorflow == 2.16.1
+tensorflow < 2.16.1
 cv
