@@ -5,19 +5,19 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import pickle
 from tensorflow.keras.applications.vgg16 import VGG16
-import cv2
+import cv
 from PIL import Image,ImageOps
 import numpy as np
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 @st.cache_resource
 def decorder_model():
-    model = load_model('/content/model.h5')
+    model = load_model('model.h5')
     return model
 
 @st.cache_resource
 def load_tokenizer():
-    with open('/content/tokenizer.pickle', 'rb') as handle:
+    with open('tokenizer.pickle', 'rb') as handle:
       tokenizer = pickle.load(handle)
     return tokenizer
 
@@ -30,6 +30,7 @@ def load_vgg():
 st.write("""
         # Image Caption Generator
         """)
+st.write('Crafted by [ABHISHEK GAUTAM](https://github.com/ABHISHEKgauti25) ')
 
 #loading models and tokenizer
 model = decorder_model()

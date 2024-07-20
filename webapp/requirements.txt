@@ -1,4 +1,5 @@
 numpy
-Pillow
+Pillow #pil
 streamlit
 tensorflow
+cv
