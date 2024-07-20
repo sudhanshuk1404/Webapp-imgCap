@@ -42,7 +42,7 @@ file = st.file_uploader("Please upload an Image to generate caption", type = ['j
 
 def generate_features(model, image_data):
     target_size = (224, 224)
-    image = ImageOps.fit(image_data, target_size, Image.ANTIALIAS)
+    image = ImageOps.fit(image_data, target_size, Image.LANCZOS)
     img_array = np.asarray(image)
     image_reshaped = img_array[np.newaxis,...]
     features = model.predict(image_reshaped)
