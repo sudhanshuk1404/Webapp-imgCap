@@ -9,7 +9,7 @@ import cv
 from PIL import Image,ImageOps
 import numpy as np
 
-st.set_option('deprecation.showfileUploaderEncoding', False)
+#st.set_option('deprecation.showfileUploaderEncoding', False) # out-dated as per streamlit version 1.37.1
 @st.cache_resource
 def decorder_model():
     model = load_model('webapp/model.h5')
